@@ -1,0 +1,29 @@
+task_name:
+  code: pd
+  desc: Prisoner's Dilemma Task
+  cite:
+  - EPoundstone, William (1993). Prisoner's Dilemma (1st Anchor Books ed.). New York: Anchor. ISBN 0-385-41580-X.
+model_name:
+  code: delta
+  desc: Rescorla-Wagner (Delta) Model
+  cite:
+model_type:
+  code:
+  desc: Hierarchical
+notes: 
+contributors: 
+data_columns:
+  subjID: A unique identifier for each subject in the data-set.
+  choice: 'Integer value representing the option chosen on the given trial: 1 (Cooperate) or 2(Defect).'
+  outcome: Integer value representing the outcome of the given trial.
+parameters:
+  A:
+    desc: learning rate
+    info: [0, 0.5, 1]
+  tau:
+    desc: inverse temperature
+    info: [0, 1, 5]
+regressors: 
+postpreds:
+- y_pred
+additional_args: 
